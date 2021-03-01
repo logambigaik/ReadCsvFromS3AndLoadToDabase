@@ -29,12 +29,12 @@
 
 # Refer Lambda layer and ConnecttoDatabase git hub
 
-import json
-import mysql.connector
-#from mysql.connector import Error
-#from mysql.connector import errorcode
+  import json
+  import mysql.connector
+  #from mysql.connector import Error
+  #from mysql.connector import errorcode
 
-def lambda_handler(event, context):
+  def lambda_handler(event, context):
      # TODO implement
     connection = mysql.connector.connect(host='mysql-database.ckfn3yov2iqa.eu-west-2.rds.amazonaws.com',
                                         database='empdb',
@@ -59,17 +59,17 @@ def lambda_handler(event, context):
 ![image](https://user-images.githubusercontent.com/54719289/109573204-94be6480-7b14-11eb-83f2-3a599cd9c35b.png)
 
 
-import json
-import boto3
-import csv
-import mysql.connector
-#from mysql.connector import Error
-#from mysql.connector import errorcode
+  import json
+  import boto3
+  import csv
+  import mysql.connector
+  #from mysql.connector import Error
+  #from mysql.connector import errorcode
 
-s3client=boto3.client('s3')
+  s3client=boto3.client('s3')
 
 
-def lambda_handler(event, context):
+  def lambda_handler(event, context):
      # TODO implement
      
     bucket = event['Records'][0]['s3']['bucket']['name']
